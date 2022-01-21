@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sampsan sääasema</title>
+    <!-- meta charset tag fixes "ääkköset" not working on remote server.-->
+    <meta charset="UTF-8" />
+    <!-- link the Bootstrap CSS:-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar begins -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Sääasema</a>
+        <ul class="navbar-nav me-auto my-2">
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma1.html">50 viimeisintä</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma2.html">Sademäärä</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma3.html">Lämpötila</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma4.html">Signaalin valitsija</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma5.html">Vertailu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-sm">
+      <h1>Sademäärähavainnot</h1>
+      <table class="table" , id="myTable">
+        <thead>
+          <tr>
+            <th>Päiväys</th>
+            <th>Aika (GMT)</th>
+            <th>Sadekertymä (mm)</th>
+          </tr>
+        </thead>
+        <tbody id="myBody"></tbody>
+      </table>
+    </div>
+    <div style="margin-top: 90px">
+      <p>Valitse aikaväli:</p>
+      <select onchange="alusta()" name="valikko" id="valikko">
+        <option value="">Nyt</option>
+        <option value="24">Viimeiset 24 h</option>
+        <option value="48">Viimeiset 48 h</option>
+        <option value="72">Viimeiset 72 h</option>
+        <option value="168">Viimeinen viikko</option>
+        <option value="5040">Viimeinen kuukausi</option>
+      </select>
+      <canvas id="myChart" width="400" height="200"></canvas>
+      <div class="loader" id="loader"></div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="nakyma2.js"></script>
+  </body>
+</html>

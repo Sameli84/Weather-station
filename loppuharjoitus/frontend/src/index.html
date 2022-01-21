@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sampsan sääasema</title>
+    <!-- meta charset tag fixes "ääkköset" not working on remote server.-->
+    <meta charset="UTF-8" />
+    <!-- link the Bootstrap CSS:-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar begins -->
+    <nav class="navbar navbar-dark bg-dark navbar-expand-sm">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/">Sääasema</a>
+        <ul class="navbar-nav me-auto my-2">
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma1.html">50 viimeisintä</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma2.html">Sademäärä</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma3.html">Lämpötila</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma4.html">Signaalin valitsija</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nakyma5.html">Vertailu</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-sm">
+      <h1 id="otsikko">Tervetuloa sääasemasivuilleni!</h1>
+      <p>Valitse toiminto yläpalkista ja nauti!</p>
+    </div>
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="nakyma4.js"></script>
+  </body>
+</html>
